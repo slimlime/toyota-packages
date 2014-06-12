@@ -1,0 +1,244 @@
+/* Overlaying css for theme */
+img {
+	width:100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight:700;
+	margin-top:1em;
+}
+.purple-text {
+	color:#4b2177;
+}
+.white-text {
+	color:#FFF;
+}
+.text-shadow {
+	text-shadow:0px 2px 2px rgba(0,0,0,.2);
+}
+#headerMain .navbar {
+	background:transparent;
+	padding-top:1em;
+	border:0px;
+	padding-bottom: 1.2em;
+	margin-bottom: 0;
+	box-shadow: 0px 3px 3px rgba(0,0,0,.1);
+}
+#headerMain .navbar-brand {
+	float:none;
+}
+.nav-pills>li>a {
+	margin: 0px 2px;
+}
+#logo {
+	max-width:140px;
+	min-width: 80px;
+	height:auto;
+	margin-top:0.5em;
+}
+.jumbotron {
+	margin-bottom:0;
+	text-align: center;
+	line-height: 1.7em;
+	background-image: url('../img/ds-graphic.png');
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	background-size: 100% auto;
+}
+.jumbotron h1 {
+	color:#4b2177;
+}
+.first-content {
+	padding-bottom:1.5em;
+}
+.sticky-nav {
+	background: #4b2177;
+	z-index: 1000;
+	width: 100%;
+	top:0px;
+}
+div.sticky-nav.scroll-spy-nav.affix {
+box-shadow: 0px 3px 3px rgba(0,0,0,.1);
+}
+.sticky-nav .navbar-toggle, .sticky-nav .navbar-toggle .icon-bar {
+	background:rgba(0,0,0,.1);
+}
+.sticky-nav .navbar-toggle:hover {
+	background:rgba(0,0,0,.17);
+}
+.sticky-nav .secondary-navbar a {
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 15px 10px;
+	font-size: 0.9em;
+	line-height: 1.2em;
+	color:#FFF;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+}
+.sticky-nav .secondary-navbar li:hover a, .sticky-nav .secondary-navbar li.active a {
+	color:#FFF;
+	background:transparent;
+}
+.sticky-nav .secondary-navbar li:hover, .sticky-nav .secondary-navbar li.active {
+	background:rgba(0,0,0,.2);
+}
+#toyota-logo {
+	max-width: 300px;
+	height:auto;
+}
+#toyota-services, #example {
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+	padding:2em 0;
+}
+#toyota-services {
+	padding-top:0;
+}
+#pricing {
+	background:#f0f0f0;
+	padding-bottom:2em;
+}
+#pricing h2 {
+	/*color:#FFF;
+	text-shadow:0px 2px 2px rgba(0,0,0,.5);*/
+	margin-bottom: 1em
+}
+#talk-to-us {
+	padding:2em 0 1em;
+}
+.flat .plan {
+  border-radius: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4em;
+  background: transparent;
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0,0,0,.35);
+}
+.flat .plan li {
+  padding: 10px 15px;
+  color: #666;
+  border-top: 1px solid #f5f5f5;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  background:#FFF;
+}
+.flat .plan li.plan-price {
+  border-top: 0;
+  background-color:#eaeaea;
+}
+.flat .plan li.plan-name {
+  border-radius: 6px 6px 0 0;
+  padding: 15px;
+  color: #fff;
+  background: #00add7;
+  border-top: 0;
+}
+.flat .plan li.plan-name h4 {
+  font-size: 1.3em;
+  font-weight: 700;
+  text-shadow:0px -1px 0px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  margin:0;
+}
+.flat .plan li img {
+	max-width: 100px;
+}
+.flat .plan li > strong {
+  color: #00add7;
+}
+.flat .plan.featured li > strong {
+  color: #ef7f01;
+}
+.flat .plan.options li > strong {
+	color:#686868;
+}
+.flat .plan li.plan-action {
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+.flat .plan.featured {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.flat .plan.featured li.plan-name {
+  background: #ef7f01;
+}
+.flat .plan.options li.plan-name {
+  background: #686868;
+}
+.carousel .item {
+	min-height: 300px;
+}
+#why-ds {
+	background-image:url('../img/bokeh-bg.jpg');
+	background-size:100% auto;
+	background-position: bottom center;
+	background-repeat:no-repeat;
+}
+#talk-to-us {
+	padding:3em 0 1em;
+}
+#talk-to-us h2 {
+	margin-top:0;
+}
+.nav-justified>li {
+	text-align: center;
+}
+.nav-justified>li a {
+
+}
+.attribution {
+	text-align: right;
+	font-size:0.9em;
+	display:block;
+	font-style: italic;
+}
+#footerMain {
+	background:#eaeaea;
+	padding:2em 0;
+}
+.well h3:first-child {
+	margin-top:0;
+}
+#contact-form {
+
+}
+#contact-form h3 {
+	font-size:0.9em;
+	text-transform: uppercase;
+	color:rgba(0,0,0,.4);
+	letter-spacing: 1px;
+	margin-bottom:2em;
+	margin-top:0;
+}
+@media (min-width: 950px){
+	.jumbotron h1 {
+		font-size: 4em;
+		margin-top: .5em;
+	}
+}
+@media (max-width: 768px){
+  	#headerMain .nav-pills {
+		margin-top: 1em;
+	}
+	
+}
+@media (min-width: 768px){
+  	#headerMain .nav-pills {
+		margin-top: 2.5em;
+	}
+}
+@media (max-width: 500px){
+	.jumbotron {
+		background-size: 400px auto;
+	}
+}
