@@ -175,14 +175,43 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 .flat .plan.options li.plan-name {
   background: #686868;
 }
-.carousel .item {
-	min-height: 300px;
+#why-ds .container>h2 {
+	margin-bottom:-3em;
+	z-index: 100;
+	position: absolute
 }
-#why-ds {
-	background-image:url('../img/bokeh-bg.jpg');
+#why-ds .item {
 	background-size:100% auto;
-	background-position: bottom center;
+	background-position: center center;
 	background-repeat:no-repeat;
+	background-size:cover;
+	padding:2em 0;
+}
+#why-ds .item h1 {
+	font-size:2em;
+}
+#why-ds .item.first {
+	background-image:url('../img/bokeh-bg-1.jpg');
+}
+#why-ds .item.second {
+	background-image:url('../img/bokeh-bg-2.jpg');
+}
+#why-ds .item.third {
+	background-image:url('../img/bokeh-bg-3.jpg');
+}
+#why-ds .item.forth {
+	background-image:url('../img/bokeh-bg-4.jpg');
+}
+#why-ds .item.fifth {
+	background-image:url('../img/bokeh-bg-5.jpg');
+}
+.carousel-content {
+	padding: 5% 5% 10%;
+	color:#FFF;
+	text-shadow:0px 2px 1px rgba(0,0,0,.2);
+}
+#example-container {
+	position: relative;
 }
 #talk-to-us {
 	padding:3em 0 1em;
@@ -237,10 +266,24 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 		font-size: 4em;
 		margin-top: .5em;
 	}
+	.carousel .item {
+		/*min-height: 500px;*/
+		height: 500px;
+	}
+}
+@media (max-width: 950px){
+	.carousel .item {
+		height: 400px;
+		font-size:0.9em;
+	}
 }
 @media (max-width: 768px){
   	#headerMain .nav-pills {
 		margin-top: 1em;
+	}
+	.carousel .item {
+		height: 300px;
+		font-size:0.8em;
 	}
 	
 }
