@@ -35,6 +35,7 @@
               <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#"><img src="img/Dealer-Solutions-logo.png" id="logo"/></a>
+            <h3 style="display:inline;">Toyota Dealer Websites</h3>
           </div>
           <div class="navbar-collapse collapse primary-nav">
             <ul class="nav nav-pills navbar-right">
@@ -450,8 +451,8 @@
       jQuery(document).ready(function($){
         // animated elements
         var controller = $.superscrollorama();
-        controller.addTween('#toyota-services', TweenMax.from( $('#toyota-services'), .5, {css:{opacity: 0}}),0, 100, false);
-        controller.addTween('.featured', TweenMax.fromTo( $('.featured'), .5, {scaleX:1, scaleY:1, immediateRender:true, ease:Quad.easeInOut}, {scaleX:1.1, scaleY:1.1, ease:Quad.easeInOut}),0,100,false);
+        controller.addTween('#toyota-services', TweenMax.from( $('#toyota-services'), .5, {css:{opacity: 0}}),0, 0, false);
+        controller.addTween('.featured', TweenMax.fromTo( $('.featured'), .5, {scaleX:1, scaleY:1, immediateRender:true, ease:Quad.easeInOut}, {scaleX:1.1, scaleY:1.1, ease:Quad.easeInOut}),0,150,false);
         controller.addTween('#example-text', TweenMax.from( $('#example-text'), .75, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,-100,false);
         controller.addTween('#example-pic', TweenMax.from( $('#example-pic'), .75, {css:{left:'1500px'}, ease:Quad.easeInOut}),0,-100,false);
         // smooth scroll for links that lead to other dom elements on the same page
