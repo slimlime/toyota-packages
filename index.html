@@ -107,7 +107,7 @@
         <div class="carousel-inner">
           <div class="item first active">
             <div class="container">
-              <div class="carousel-content">
+              <div class="carousel-content" id="first-carousel">
                 <div class="col-xs-6">
                   <h1>Toyota Compliant Websites</h1>
                   <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
@@ -456,10 +456,15 @@
       jQuery(document).ready(function($){
         // animated elements
         var controller = $.superscrollorama();
-        controller.addTween('#toyota-services', TweenMax.from( $('#toyota-services'), .5, {css:{opacity: 0}}),0, 0, false);
+        //controller.addTween('.first-content', TweenMax.from( $('.first-content'), .5, {css:{opacity: 0}}),0, 0, false);
+        controller.addTween('#toyota-services-graphic', TweenMax.from( $('#toyota-services-graphic'), 1, {scaleX:0, scaleY:0, immediateRender:true, ease:Quad.easeInOut}, {scaleX:1, scaleY:1, ease:Quad.easeInOut}),0,-300,false);
+        controller.addTween('#toyota-services-graphic', TweenMax.from( $('#toyota-services-graphic'), .5, {css:{opacity: 0}}),0, -300, false);
+        controller.addTween('#first-carousel', TweenMax.from( $('#first-carousel'), .5, {css:{opacity: 0}}),0, 0, false);
         controller.addTween('.featured', TweenMax.fromTo( $('.featured'), .5, {scaleX:1, scaleY:1, immediateRender:true, ease:Quad.easeInOut}, {scaleX:1.1, scaleY:1.1, ease:Quad.easeInOut}),0,150,false);
-        controller.addTween('#example-text', TweenMax.from( $('#example-text'), .75, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,-100,false);
-        controller.addTween('#example-pic', TweenMax.from( $('#example-pic'), .75, {css:{left:'1500px'}, ease:Quad.easeInOut}),0,-100,false);
+        controller.addTween('#example-text', TweenMax.from( $('#example-text'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,-100,false);
+        controller.addTween('#example-pic', TweenMax.from( $('#example-pic'), 1, {css:{left:'1500px'}, ease:Quad.easeInOut}),0,-100,false);
+        controller.addTween('#contact-form', TweenMax.from( $('#contact-form'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,0,false);
+        controller.addTween('#contacts', TweenMax.from( $('#contacts'), .5, {css:{opacity: 0}}),0, 0, false);
         // smooth scroll for links that lead to other dom elements on the same page
         $(function() {
           $('a.onpage[href*=#]:not([href=#])').click(function() {
