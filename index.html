@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dealer Solutions, Toyota Dealer Web Packages</title>
 
+    <!-- Uikit -->
+    <link href="css/uikit.min.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -20,7 +22,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body data-spy="scroll" data-target=".scroll-spy-nav"  data-offset="150">
+  <body data-spy="scroll" data-target=".scroll-spy-nav"  data-offset="170">
 
     <header id="headerMain">
 
@@ -48,15 +50,14 @@
     </div>
     </header>
 
-    <section class="jumbotron">
+    <!--<section class="jumbotron">
       <div class="container first-content">
         <div class="col-md-12">
           <h1>A Total Toyota Solution</h1>
           <p>We have everything you need to increase your Toyota dealership’s performance both on and off-line. No matter what your goal, whether big or small, Dealer Solutions can provide you with the best Toyota Solution.</p>
         </div>
       </div>
-      
-    </section>
+    </section>-->
     <div class="sticky-nav scroll-spy-nav" data-spy="affix" data-offset-top="350">
         <div class="container">
           <div class="navbar-header col-md-12">
@@ -82,9 +83,64 @@
     <section id="toyota-services">
       <div class="container">
         <div class="col-md-12">
-        <h2>Toyota Services</h2>
-          <div id="toyota-services-graphic">
+          <h2>Toyota Services</h2>
+          <h4>Secondary heading to explain what this panel is and balance the icons.</h4>
+          <!--<div id="toyota-services-graphic">
             <img src="img/toyota-services.svg" class="svg-img" align="center"/>
+          </div>-->
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}"><span class="service-icon"><i class="fa fa-home"></i></span><h5>Compliant Websites</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-sitemap"></i></span><h5>Lead Management</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-folder"></i></span><h5>Inventory</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}"><span class="service-icon"><i class="fa fa-comments"></i></span><h5>Expert Support</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:0}"><span class="service-icon"><i class="fa fa-phone-square"></i></span><h5>Call Tracking</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-search"></i></span><h5>SEO Optimisation</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-thumbs-up"></i></span><h5>Social Media</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:400}"><span class="service-icon"><i class="fa fa-video-camera"></i></span><h5>Movie Stars</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:0}"><span class="service-icon"><i class="fa fa-camera"></i></span><h5>Vehicle Imagery</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-users"></i></span><h5>Complete Online Marketing</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-youtube-play"></i></span><h5>Youtube</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}"><span class="service-icon"><i class="fa fa-bar-chart-o"></i></span><h5>Analytics</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -110,8 +166,8 @@
               <div class="carousel-content" id="first-carousel">
                 <div class="col-xs-6">
                   <h1>Toyota Compliant Websites</h1>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                   <p>Ut enim ad minim veniam, quis velit esse elit non mi porta gravida at eget metus gravida at.</p>
+                  <p>Showcase your dealership online with a Toyota Compliant website.</p>
+                  <p>Our websites are built by an expert team that adhere to Toyota’s brand rules, so you can be confident that your website is of the quality Toyota is known for.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">About Our Websites</a></p>
                 </div>
                 <div class="col-xs-6">
@@ -124,12 +180,12 @@
             <div class="container">
               <div class="carousel-content">
                 <div class="col-xs-6">
-                  <img src="img/packages-carousel.png" />
+                  <img src="img/packages-carousel.png"/>
                 </div>
                 <div class="col-xs-6">
                   <h1>Solutions To Suit You</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id.</p>
-                   <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco id nibh ultricies vehicul nibh ultricies.</p>
+                  <p>No matter your Toyota dealership size, Dealer Solutions have a solution to suit you.</p>
+                  <p>We know every dealer is different, which is why we offer multiple packages, to ensure a Toyota compliant solution that’s right for you.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">See Packages</a></p>
                 </div>
               </div>
@@ -143,8 +199,8 @@
                 </div>
                 <div class="col-xs-8">
                   <h1>Complete Online Marketing</h1>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse id nibh ultricies vehicula velit esse id.</p>
+                  <p>Maximise your dealership’s performance with a complete online marketing solution.<p>
+                  <p>Dealers Solutions combines all the latest online marketing services and enables them to work in unison to help you <strong>achieve your marketing objectives.</strong></p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">Our Marketing Solutions</a></p>
                 </div>
               </div>
@@ -154,12 +210,11 @@
             <div class="container">
               <div class="carousel-content">
                 <div class="col-xs-6">
-                  <img src="img/stock-staff.jpg" />
+                  <img src="img/carousel-staff.jpg" />
                 </div>
                 <div class="col-xs-6">
                   <h1>Expert Staff</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut.</p>
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse id nibh ultricies.</p>
+                  <p>Dealer Solutions has been helping motor dealers continually improve the performance of their business for over 20 years. With over 2,300 dealerships currently using a variety of our services, our team of trusted staff are the driving force behind our success.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">See Our Staff</a></p>
                 </div>
               </div>
@@ -170,12 +225,12 @@
               <div class="carousel-content">
                 <div class="col-xs-6">
                   <h1>Inventory</h1>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                   <p>Ut enim ad minim veniam, quis nostrud exercitation in voluptate velit esse.</p>
+                  <p>Distributing your inventory online has never been this easy!</p>
+                  <p>Dealer Solutions provides an easy to use online interface to manage your inventory which allows you to constantly update your own website as well as other online automotive websites.</p>
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">Read More</a></p>
                 </div>
                 <div class="col-xs-6">
-                  <img src="img/toyotas.jpg" />
+                  <img src="img/carousel-inventory.jpg" />
                 </div>
               </div>
             </div>
@@ -191,7 +246,7 @@
       <h2>Packages To Suit You</h2>
         <div class="row flat">
             <div class="col-lg-3 col-md-3">
-                <ul class="plan plan1">
+                <ul class="plan plan1" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:0}">
                     <li class="plan-name">
                         <h4>Plus Package</h4>
                         <small>Just the basics.</small>
@@ -227,7 +282,7 @@
             </div>
 
             <div class="col-lg-3 col-md-3">
-                <ul class="plan plan2">
+                <ul class="plan plan2" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:500}">
                     <li class="plan-name">
                         <h4>Pro Package</h4>
                         <small>Personalised to your dealership.</small>
@@ -264,7 +319,7 @@
          </div>
 
          <div class="col-lg-3 col-md-3">
-            <ul class="plan plan3 featured">
+            <ul class="plan plan3" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:1000}">
                 <li class="plan-name">
                     <h4>ELITE Package</h4>
                     <small>The complete package.</small>
@@ -302,7 +357,7 @@
      </div>
 
      <div class="col-lg-3 col-md-3">
-        <ul class="plan plan4 options">
+        <ul class="plan plan4 options" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:1500}">
             <li class="plan-name">
                 <h4>OPTIONS</h4>
                 <small>Available for all Packages.</small>
@@ -340,13 +395,21 @@
 
     <section id="example">
       <div class="container">
-        <div class="col-md-6" id="example-text">
+        <div class="col-md-6" id="example-text" data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
           <h2>Real-Life Example</h2>
           <h3 style="color:#ee2b33;">Ken Mills Toyota</h3>
-          <p><blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="attribution">- Ken Mills, Managing Director</span></blockquote> </p>
-          <p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Principal Dealer, Brett Mills at Ken Mills Toyota Sunshine Coast signed up for a new Toyota compliant website and a complete online marketing package to better promote his dealership online.<p>
+          <p>After discussing his needs, Dealer Solutions delivered a marketing strategy to address his requests. After only three months, Dealer Solutions had delivered the following results: </br>
+
+          <ul class="example-points">
+            <li><em>Make my site more engaging</em><br/><strong>We delivered a 40.3% increase in return website visits</strong></li>
+            <li><em>Increase my online presence</em><br/><strong>We delivered a 21.3% increase in organic traffic</strong></li>
+            <li><em>Generate more sales leads</em><br/><strong>We delivered a 24.9% increase in online vehicle enquiries</strong></li>
+            <li><em>Increase service bookings</em><br/><strong>We delivered a 42.5% increase in service enquiries</strong></li>
+          </ul>
+
         </div>
-        <div class="col-md-6" id="example-pic">
+        <div class="col-md-6" id="example-pic" data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
           <img src="img/ken-mills-monitor.png" />
         </div>
       </div>
@@ -354,11 +417,11 @@
 
     <section id="talk-to-us">
       <div class="container">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <h2>Talk To Us</h2>
           <p><em>Setting up a dealer package is easy!</em></p>
-          <p>Simply contact us online via the enquiry form below and one of our business managers will contact you shortly.<br/>  You can also call us directly on 1300 66 11 33.</p>
-          <div id="contact-form" class="panel panel-default">
+          <p>Simply contact us online via the enquiry form below and one of our business managers will contact you shortly.</p>
+          <div id="contact-form" class="panel panel-default col-md-8" data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
             <div class="panel-body">
             <h3>Contact Form</h3>
               <form class="form-horizontal" role="form">
@@ -406,26 +469,26 @@
               </form>
             </div>
           </div>
+          <div class="col-md-4" id="contacts" data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
+            <div class="well phone-number">
+              <h2><i class="fa fa-phone"></i></h2>
+              <h3>Or Call Us Now!</h3>
+              <h2>1300 66 11 33</h2>
+                <!--<dt>Fax</dt>
+                <dd>1300 66 11 34</dd>
+                <dt>National Office Address</dt>
+                <dd>10 Hudson Road, Albion QLD 4010 Australia </dd>
+                <dt>State Offices</dt>
+                <dd>Sydney, Melbourne, Perth, Adelaide.</dd>
+                <dt>Postal Address (All mail please)</dt>
+                <dd>PO Box 2445, Fortitude Valley QLD Australia 4006</dd>
+              </dl>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541.1792465816898!2d153.04045899999994!3d-27.43252399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9159b7a33a906f%3A0x74a163d4a090e3a4!2sDealer+Solutions!5e0!3m2!1sen!2sau!4v1402544527535" frameborder="0" style="border:0"></iframe>-->
+            </div>
+        </div>
           
         </div>
-        <div class="col-md-4" id="contacts">
-          <div class="well">
-            <h3>Contact Details</h3>
-            <dl>
-              <dt>Phone</dt>
-              <dd>1300 66 11 33</dd>
-              <dt>Fax</dt>
-              <dd>1300 66 11 34</dd>
-              <dt>National Office Address</dt>
-              <dd>10 Hudson Road, Albion QLD 4010 Australia </dd>
-              <dt>State Offices</dt>
-              <dd>Sydney, Melbourne, Perth, Adelaide.</dd>
-              <dt>Postal Address (All mail please)</dt>
-              <dd>PO Box 2445, Fortitude Valley QLD Australia 4006</dd>
-            </dl>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3541.1792465816898!2d153.04045899999994!3d-27.43252399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9159b7a33a906f%3A0x74a163d4a090e3a4!2sDealer+Solutions!5e0!3m2!1sen!2sau!4v1402544527535" frameborder="0" style="border:0"></iframe>
-          </div>
-        </div>
+        
 
       </div>
     </section>
@@ -445,26 +508,54 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- scrollorama controllers -->
     <script src="js/jquery.superscrollorama.js"></script>
-    <script>
-      $(document).ready(function() {
-        
-
-      });
-    </script>
-
+    <!-- uikit js for animations -->
+    <script src="js/uikit.min.js"></script>
     <script type="text/JavaScript">
       jQuery(document).ready(function($){
+
+        $('.plan').each(function(i){
+          $(this).css('z-index', (100-i) );
+        });
+
         // animated elements
-        var controller = $.superscrollorama();
+        var controller = $.superscrollorama({reverse:false, playoutAnimations:false});
         //controller.addTween('.first-content', TweenMax.from( $('.first-content'), .5, {css:{opacity: 0}}),0, 0, false);
-        controller.addTween('#toyota-services-graphic', TweenMax.from( $('#toyota-services-graphic'), 1, {scaleX:0, scaleY:0, immediateRender:true, ease:Quad.easeInOut}, {scaleX:1, scaleY:1, ease:Quad.easeInOut}),0,-300,false);
-        controller.addTween('#toyota-services-graphic', TweenMax.from( $('#toyota-services-graphic'), .5, {css:{opacity: 0}}),0, -300, false);
-        controller.addTween('#first-carousel', TweenMax.from( $('#first-carousel'), .5, {css:{opacity: 0}}),0, 0, false);
-        controller.addTween('.featured', TweenMax.fromTo( $('.featured'), .5, {scaleX:1, scaleY:1, immediateRender:true, ease:Quad.easeInOut}, {scaleX:1.1, scaleY:1.1, ease:Quad.easeInOut}),0,150,false);
-        controller.addTween('#example-text', TweenMax.from( $('#example-text'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,-100,false);
-        controller.addTween('#example-pic', TweenMax.from( $('#example-pic'), 1, {css:{left:'1500px'}, ease:Quad.easeInOut}),0,-100,false);
-        controller.addTween('#contact-form', TweenMax.from( $('#contact-form'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,0,false);
-        controller.addTween('#contacts', TweenMax.from( $('#contacts'), .5, {css:{opacity: 0}}),0, 0, false);
+        controller.addTween('#toyota-services-graphic', TweenMax.from( $('#toyota-services-graphic'), 1, {scaleX:0, scaleY:0, immediateRender:true, ease:Quad.easeInOut}, {scaleX:1, scaleY:1, ease:Quad.easeInOut}),0,-300);
+        controller.addTween('#toyota-services-graphic', TweenMax.from( $('#toyota-services-graphic'), .5, {css:{opacity: 0}}),0, -300);
+        controller.addTween('#first-carousel', TweenMax.from( $('#first-carousel'), .5, {css:{opacity: 0}}),0, 0);
+        //controller.addTween('.featured', TweenMax.fromTo( $('.featured'), .5, {scaleX:1, scaleY:1, immediateRender:true, ease:Quad.easeInOut}, {scaleX:1.1, scaleY:1.1, ease:Quad.easeInOut}),0,150,false);
+        /*if (typeof controller != 'undefined') {
+          $('.plan:eq(1), .plan:eq(2), .plan:eq(3)').css('opacity','0');
+          //$('.plan:eq(3)').css('left','1500px');
+        }
+        controller.addTween('.plan:eq(0)', TweenMax.from( $('.plan:eq(0)'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut,
+          onComplete:function(){
+            $('.plan:eq(1)').css('opacity','1');
+            controller.addTween('.plan:eq(1)', TweenMax.from( $('.plan:eq(1)'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut,
+              onComplete:function(){
+                $('.plan:eq(2)').css('opacity','1');
+                controller.addTween('.plan:eq(2)', TweenMax.from( $('.plan:eq(2)'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut,
+                  onComplete:function(){
+                    $('.plan:eq(3)').css('opacity','1');
+                    controller.addTween('.plan:eq(3)', TweenMax.from( $('.plan:eq(3)'), .75, {css:{left:'1500px'}, ease:Quad.easeInOut}),0,-400);
+                  }
+                }),0,-400);
+              }
+            }),0,-400);
+          }
+        }),0,-250);*/
+        /*$('.plan').each(function(i){
+          controller.addTween('.plan:eq('+i+')', TweenMax.from( $('.plan:eq('+i+')'), (1.5+(i*1.5)), {css:{right:'1500px'}, ease:Quad.easeInOut}),0,0,false);
+        });*/
+        
+        /*controller.addTween('.plan:eq(1)', TweenMax.from( $('.plan:eq(1)'), 1.5, {css:{right:'2000px'}, ease:Quad.easeInOut}),0,0,false);
+        controller.addTween('.plan:eq(2)', TweenMax.from( $('.plan:eq(2)'), 1.5, {css:{right:'2500px'}, ease:Quad.easeInOut}),0,0,false);
+        controller.addTween('.plan:eq(3)', TweenMax.from( $('.plan:eq(3)'), 1.5, {css:{left:'1500px'}, ease:Quad.easeInOut}),0,0,false);*/
+        
+        //controller.addTween('#example-text', TweenMax.from( $('#example-text'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,-100);
+        //controller.addTween('#example-pic', TweenMax.from( $('#example-pic'), 1, {css:{left:'1500px'}, ease:Quad.easeInOut}),0,-100);
+        //controller.addTween('#contact-form', TweenMax.from( $('#contact-form'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,0);
+        //controller.addTween('#contacts', TweenMax.from( $('#contacts'), .5, {css:{opacity: 0}}),0, -100);
         // smooth scroll for links that lead to other dom elements on the same page
         $(function() {
           $('a.onpage[href*=#]:not([href=#])').click(function() {
