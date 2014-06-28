@@ -12,6 +12,9 @@ em {
 h2 {
 	font-size: 2.4em;
 }
+.tel-link:hover {
+	text-decoration: none;
+}
 .purple-text {
 	color:#4b2177;
 }
@@ -99,7 +102,7 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 #example {
 	padding:5% 0;
 }
-#toyota-services, #example {
+#example {
 	background: rgb(255,255,255); /* Old browsers */
 	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
@@ -110,10 +113,10 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 }
 #toyota-services {
-	/*background-image: url('../img/ds-graphic.png');
+	background-image: url('../img/services-bg.jpg');
 	background-position:center top;
 	background-repeat:no-repeat;
-	background-size: 100% auto;*/
+	background-size: auto 100%;
 }
 #pricing {
 	background:#f0f0f0;
@@ -131,13 +134,13 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 }
 .flat .plan {
   position:relative;
-  border-radius: 6px;
+  border-radius: 6px 6px 0px 6px;
   list-style: none;
   padding: 0;
-  margin: 0 -10px 4em;
+  margin: 0 -15px 4em;
   background: transparent;
   text-align: center;
-  box-shadow: 0px 1px 3px rgba(0,0,0,.35);
+  box-shadow: 0px 1px 1px rgba(0,0,0,.35);
 }
 .flat .plan li {
   padding: 10px 15px;
@@ -152,11 +155,28 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
   background-color:#eaeaea;
 }
 .flat .plan li.plan-name {
-  border-radius: 6px 6px 0 0;
   padding: 15px;
   color: #fff;
   background: #d11e24;
   border-top: 0;
+}
+.flat .col-md-3:first-child .plan li.plan-name {
+	border-radius: 6px 0 0 0;
+}
+.flat .col-md-3:nth-child(3) .plan li.plan-name {
+	border-radius: 0 6px 0 0;
+}
+.flat .col-md-3:last-child .plan {
+	margin:0 10px 4em;
+}
+.flat .col-md-3:last-child .plan li.plan-name {
+	border-radius: 6px 6px 0 0;
+}
+.flat .col-md-3:nth-child(3) .plan {
+	border-radius: 6px 6px 6px 6px;
+}
+.flat .col-md-3:nth-child(3) .plan li.plan-action {
+	border-bottom-right-radius: 6px;
 }
 .flat .plan li.plan-name h4 {
   font-size: 1.3em;
@@ -179,7 +199,7 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 }
 .flat .plan li.plan-action {
 	border-bottom-left-radius: 6px;
-	border-bottom-right-radius: 6px;
+	/*border-bottom-right-radius: 6px;*/
 }
 .flat .plan.featured {
   -webkit-transform: scale(1.1);
@@ -234,6 +254,7 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 #example-text, #example-pic {
 	position: relative;
 }
+
 #example-container {
 	position: relative;
 }
@@ -272,6 +293,9 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 	border-color:#4b2177;
 	text-align: center;
 }
+.well.phone-number:hover {
+	background:#56238b;
+}
 .well.phone-number h2 {
 	font-size:2.6em;
 }
@@ -302,26 +326,20 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 	margin-top:0;
 }
 #toyota-services .services {
-	margin-top:2em;
+	margin-top: 2em;
 	margin-bottom: 1em;
-	background: #FFF;
+	background: rgba(255,255,255,.25);
 	border-radius: 5px;
-	box-shadow: 0px 1px 2px rgba(0,0,0,.35);
+	border: 1px solid rgba(255,255,255,.5);
+	color: #FFF;
 	padding: 20px;
-	background: rgb(255,255,255); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 }
 #toyota-services .services h5 {
 	text-transform: uppercase;
-	font-weight: 300;
-	color:#ED1C24;
+	font-weight: 500;
+	color:white;
 	letter-spacing: 0.1em;
+	font-size: 1.1em;
 }
 #toyota-services .services span.service-icon {
 	display:inline-block;
@@ -331,19 +349,28 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 	width:60px;
 	height:60px;
 	text-align: center;
-	background: #444444; /* Old browsers */
-	background: -moz-linear-gradient(-45deg,  #444444 0%, #393939 49%, #303030 50%, #333333 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#444444), color-stop(49%,#393939), color-stop(50%,#303030), color-stop(100%,#333333)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg,  #444444 0%,#393939 49%,#303030 50%,#333333 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg,  #444444 0%,#393939 49%,#303030 50%,#333333 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg,  #444444 0%,#393939 49%,#303030 50%,#333333 100%); /* IE10+ */
-	background: linear-gradient(135deg,  #444444 0%,#393939 49%,#303030 50%,#333333 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#333333',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+	background: #ed1c24; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #ed1c24 0%, #ed1c24 50%, #d11e24 51%, #d11e24 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#ed1c24), color-stop(50%,#ed1c24), color-stop(51%,#d11e24), color-stop(100%,#d11e24)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #ed1c24 0%,#ed1c24 50%,#d11e24 51%,#d11e24 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #ed1c24 0%,#ed1c24 50%,#d11e24 51%,#d11e24 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #ed1c24 0%,#ed1c24 50%,#d11e24 51%,#d11e24 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #ed1c24 0%,#ed1c24 50%,#d11e24 51%,#d11e24 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed1c24', endColorstr='#d11e24',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	/*
+	background: #444444;
+	background: -moz-linear-gradient(-45deg,  #444444 0%, #393939 49%, #303030 50%, #333333 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#444444), color-stop(49%,#393939), color-stop(50%,#303030), color-stop(100%,#333333));
+	background: -webkit-linear-gradient(-45deg,  #444444 0%,#393939 49%,#303030 50%,#333333 100%);
+	background: -o-linear-gradient(-45deg,  #444444 0%,#393939 49%,#303030 50%,#333333 100%);
+	background: -ms-linear-gradient(-45deg,  #444444 0%,#393939 49%,#303030 50%,#333333 100%);
+	background: linear-gradient(135deg,  #444444 0%,#393939 49%,#303030 50%,#333333 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444444', endColorstr='#333333',GradientType=1 ); 
+	*/
 }
 #toyota-services .services p {
-	font-weight: 600;
-	color: rgba(0,0,0,.35);
+	font-weight: 300;
+	color: white;
 	line-height: 1.2em;
 }
 #toyota-services .services span.service-icon i {
@@ -372,7 +399,14 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 .example-points li em {
 	color:#ED1C24;
 }
-
+#ds-carousel p {
+	font-size:1.2em;
+}
+@media (min-width: 750px){
+	#example-pic img {
+		margin-top:4em;
+	}
+}
 @media (min-width: 950px){
 	.jumbotron h1 {
 		font-size: 4em;
@@ -402,6 +436,19 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 		font-size:0.9em;
 		padding:40px 0 20px;
 	}
+	.flat .col-md-3:first-child .plan li.plan-name {
+		border-radius: 6px 6px 0 0;
+	}
+	.flat .plan li.plan-action {
+		border-bottom-left-radius: 6px;
+		border-bottom-right-radius: 6px;
+	}
+	.flat .plan {
+		border-radius: 6px;
+	}
+	.flat .plan li.plan-name {
+		border-radius: 6px 6px 0 0!important;
+	}
 }
 @media (max-width: 768px){
   	#headerMain .nav-pills {
@@ -412,7 +459,6 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 		font-size:0.8em;
 		padding:30px 0 10px;
 	}
-	
 }
 @media (min-width: 768px){
   	#headerMain .nav-pills {
