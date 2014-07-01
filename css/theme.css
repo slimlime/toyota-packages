@@ -100,7 +100,10 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 	height:auto;
 }
 #example {
-	padding:5% 0;
+	padding:5% 0 2.5%;
+}
+#example .scroll-to {
+	margin:3em 0 2em;
 }
 #example {
 	background: rgb(255,255,255); /* Old browsers */
@@ -121,7 +124,7 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 #pricing {
 	background:#f0f0f0;
 	overflow: hidden;
-	padding: 2% 0;
+	padding: 1% 0 2%;
 }
 #pricing h2 {
 	/*color:#FFF;
@@ -137,7 +140,7 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
   border-radius: 6px 6px 0px 6px;
   list-style: none;
   padding: 0;
-  margin: 0 -15px 4em;
+  margin: 0 -15px 1em;
   background: transparent;
   text-align: center;
   box-shadow: 0px 1px 1px rgba(0,0,0,.35);
@@ -317,6 +320,7 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 #toyota-services {
 	text-align: center;
 	padding: 2% 0 4%;
+	min-height: 945px;
 }
 #toyota-services h2 {
 	/*color:#ED1C24;*/
@@ -399,8 +403,33 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 .example-points li em {
 	color:#ED1C24;
 }
+.example-points i {
+	margin-right: 5px;
+}
+.example-points li.target {
+	margin-bottom:0;
+	text-indent: -.6em;
+}
+
+.example-points li.result {
+	margin-top:0;
+	text-indent: -.6em;
+}
+span.required-tag {
+	margin-left:3px;
+	font-size:1.2em;
+	font-weight: 600;
+	color:#ED1C24;
+}
+
 #ds-carousel p {
 	font-size:1.2em;
+}
+.next-button {
+	text-align: center;
+}
+.scroll-to {
+	margin:1em 0;
 }
 @media (min-width: 750px){
 	#example-pic img {
@@ -414,15 +443,32 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 	}
 	.carousel .item {
 		/*min-height: 500px;*/
-		height: 500px;
+		height: 550px;
 		padding:50px 0 30px;
+	}
+}
+@media (min-width: 768px){
+  	#headerMain .nav-pills {
+		margin-top: 2.5em;
+	}
+	#scrollToExample {
+		margin-top:-100px;
+	}
+	.carousel-indicators {
+		bottom: 80px;
 	}
 }
 @media (min-width: 1060px){
 	.carousel .item {
 		/*min-height: 500px;*/
-		height: 550px;
+		height: 620px;
 		padding:50px 0 30px;
+	}
+	#scrollToExample {
+		margin-top:-120px;
+	}
+	.carousel-indicators {
+		bottom: 100px;
 	}
 }
 @media (max-width: 1100px){
@@ -432,7 +478,7 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 }
 @media (max-width: 950px){
 	.carousel .item {
-		height: 450px;
+		height: 500px;
 		font-size:0.9em;
 		padding:40px 0 20px;
 	}
@@ -455,16 +501,18 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 		margin-top: 1em;
 	}
 	.carousel .item {
-		height: 400px;
+		height: 450px;
 		font-size:0.8em;
 		padding:30px 0 10px;
 	}
-}
-@media (min-width: 768px){
-  	#headerMain .nav-pills {
-		margin-top: 2.5em;
+	#scrollToExample {
+		margin-top:-80px;
+	}
+	.carousel-indicators {
+		bottom: 60px;
 	}
 }
+
 @media (max-width: 500px){
 	.jumbotron {
 		background-size: 400px auto;
@@ -489,4 +537,102 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 		margin-left:0;
 		margin-right:0;
 	}
+}
+
+
+
+/* Special button animations */
+
+/* Pulse */
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+
+@keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+@-webkit-keyframes pulseGlow {
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #ED1C24; 
+    box-shadow: 0 0 3px #ED1C24;
+  }
+
+  75% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.9);
+    background-color: #d11e24; 
+    box-shadow: 0 0 0px #d11e24;
+  }
+}
+
+@keyframes pulseGlow {
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    background-color: #ED1C24; 
+    box-shadow: 0 0 3px #ED1C24;
+  }
+
+  75% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.9);
+    background-color: #d11e24; 
+    box-shadow: 0 0 0px #d11e24;
+  }
+}
+
+.pulse {
+  display: inline-block;
+  -webkit-transform: translateZ(0.99);
+  transform: translateZ(0.95);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.pulse, .pulse:focus, .pulse:active {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.pulseGlow {
+	background:#d11e24;
+	border-color:#d11e24;
+	color:#FFF;
+
+	display: inline-block;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+
+	-webkit-animation-name: pulseGlow;
+	animation-name: pulseGlow;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;	
+}
+.pulseGlow:hover {
+	color:#FFF;
 }

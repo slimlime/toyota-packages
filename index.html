@@ -12,8 +12,11 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- bootstrap validator -->
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css"/>
     <!-- Theme -->
     <link href="css/theme.css" rel="stylesheet">
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,72 +86,85 @@
     <section id="toyota-services">
       <div class="container">
         <div class="col-md-12">
-          <h2>Toyota Services</h2>
-          <h4>Secondary heading to explain what this panel is and balance the icons.</h4>
+          <h2 class="white-text text-shadow">Toyota Dealer Website Platform</h2>
+          <h4 class="white-text text-shadow">The Total Online Marketing Solution For Toyota Dealers.</h4>
           <!--<div id="toyota-services-graphic">
             <img src="img/toyota-services.svg" class="svg-img" align="center"/>
           </div>-->
         </div>
         <div class="row">
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}"><span class="service-icon"><i class="fa fa-home"></i></span><h5>Compliant Websites</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-sitemap"></i></span><h5>Lead Management</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-folder"></i></span><h5>Inventory</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}"><span class="service-icon"><i class="fa fa-comments"></i></span><h5>Expert Support</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
-            </div>
+          <div class="col-sm-12">
+            <img src="img/toyota-logo-white.png" alt="Toyota Logo" style="max-width:400px;margin:2em 0 1em;"/></br>
+            <a class="btn btn-lg pulseGlow" id="showServices" href="#serviceTiles">Click Here To See our Services <i class="fa fa-chevron-circle-down"></i></a>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:0}"><span class="service-icon"><i class="fa fa-phone-square"></i></span><h5>Call Tracking</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+        <div id="serviceTiles" style="display:none;">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom'}"><span class="service-icon"><i class="fa fa-home"></i></span><h5>Compliant Websites</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-sitemap"></i></span><h5>Lead Management</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-folder"></i></span><h5>Inventory</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}"><span class="service-icon"><i class="fa fa-comments"></i></span><h5>Expert Support</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-search"></i></span><h5>SEO Optimisation</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:0}"><span class="service-icon"><i class="fa fa-phone-square"></i></span><h5>Call Tracking</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-search"></i></span><h5>SEO Optimisation</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-thumbs-up"></i></span><h5>Social Media</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:400}"><span class="service-icon"><i class="fa fa-video-camera"></i></span><h5>Movie Stars</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-thumbs-up"></i></span><h5>Social Media</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:0}"><span class="service-icon"><i class="fa fa-camera"></i></span><h5>Vehicle Imagery</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-users"></i></span><h5>Online Marketing</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-youtube-play"></i></span><h5>Youtube</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}"><span class="service-icon"><i class="fa fa-bar-chart-o"></i></span><h5>Analytics</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+              </div>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:400}"><span class="service-icon"><i class="fa fa-video-camera"></i></span><h5>Movie Stars</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
+          <div class="row">
+            <div class="col-sm-12">
+              <a class="btn btn-lg pulseGlow scroll-to" id="scrollToPricing" href="#pricing">Click Here To Find A Package Which Suits You <i class="fa fa-chevron-circle-down"></i></a>
             </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:0}"><span class="service-icon"><i class="fa fa-camera"></i></span><h5>Vehicle Imagery</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:100}"><span class="service-icon"><i class="fa fa-users"></i></span><h5>Complete Online Marketing</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:200}"><span class="service-icon"><i class="fa fa-youtube-play"></i></span><h5>Youtube</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="services" data-uk-scrollspy="{cls:'uk-animation-slide-bottom',delay:300}"><span class="service-icon"><i class="fa fa-bar-chart-o"></i></span><h5>Analytics</h5><p>This is a short blurb that we could use to elaborate on the service.</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <section id="pricing">
       <div class="container">
-      <h2>Packages To Suit You</h2>
+      <h2>Exclusive Toyota Dealers Packages</h2>
         <div class="row flat">
             <div class="col-lg-3 col-md-3">
                 <ul class="plan plan1" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:0}">
@@ -296,6 +312,11 @@
         </ul>
       </div>
     </div>
+    <div class="row">
+      <div class="col-sm-12 next-button">
+        <a class="btn btn-lg pulseGlow scroll-to" id="scrollToWhy" href="#why-ds">Why Choose Dealer Solutions <i class="fa fa-chevron-circle-down"></i></a>
+      </div>
+    </div>
     </section>
 
     <section id="why-ds">
@@ -323,7 +344,7 @@
                   <p><a class="btn btn-lg btn-primary" href="#" role="button">About Our Websites</a></p>
                 </div>
                 <div class="col-xs-6">
-                  <img src="img/toyota-website-monitor.png" />
+                  <img src="img/toyota-website-monitor.png" style="max-height:450px;"/>
                 </div>
               </div>
             </div>
@@ -391,6 +412,11 @@
         <a class="left carousel-control" href="#ds-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
         <a class="right carousel-control" href="#ds-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
       </div>
+      <div class="row">
+        <div class="col-sm-12 next-button">
+          <a class="btn btn-lg pulseGlow scroll-to" id="scrollToExample" href="#example">See A Real Example <i class="fa fa-chevron-circle-down"></i></a>
+        </div>
+      </div>
     </section>
 
     <section id="example">
@@ -402,15 +428,25 @@
           <p>After discussing his needs, Dealer Solutions delivered a marketing strategy to address his requests. After only three months, Dealer Solutions had delivered the following results: </br>
 
           <ul class="example-points">
-            <li><em>Make my site more engaging</em><br/><strong>We delivered a 40.3% increase in return website visits</strong></li>
-            <li><em>Increase my online presence</em><br/><strong>We delivered a 21.3% increase in organic traffic</strong></li>
-            <li><em>Generate more sales leads</em><br/><strong>We delivered a 24.9% increase in online vehicle enquiries</strong></li>
-            <li><em>Increase service bookings</em><br/><strong>We delivered a 42.5% increase in service enquiries</strong></li>
+            <li class="target"><em><i class="fa fa-square-o"></i> Make my site more engaging</em></li>
+            <li class="result"><strong><i class="fa fa-check-square-o"></i> We delivered a 40.3% increase in return website visits</strong></li>
+            <li class="target"><em><i class="fa fa-square-o"></i> Increase my online presence</em></li>
+            <li class="result"><strong><i class="fa fa-check-square-o"></i> We delivered a 21.3% increase in organic traffic</strong></li>
+            <li class="target"><em><i class="fa fa-square-o"></i> Generate more sales leads</em></li>
+            <li class="result"><strong><i class="fa fa-check-square-o"></i> We delivered a 24.9% increase in online vehicle enquiries</strong></li>
+            <li class="target"><em><i class="fa fa-square-o"></i> Increase service bookings</em></li>
+            <li class="result"><strong><i class="fa fa-check-square-o"></i> We delivered a 42.5% increase in service enquiries</strong></li>
           </ul>
 
         </div>
         <div class="col-md-7" id="example-pic" data-uk-scrollspy="{cls:'uk-animation-slide-right'}">
           <img src="img/ken-mills-monitor.png" />
+          <a href="http://www.kenmillstoyotasunshinecoast.com.au/" target="_blank" title="Ken Mills Toyota Sunshine Coast" class="btn btn-block btn-lg btn-primary">Visit Ken Mills Toyota <i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+        <div class="row">
+          <div class="col-sm-12 next-button">
+            <a class="btn btn-lg pulseGlow scroll-to" id="scrollToContact" href="#talk-to-us">Get Your Toyota Package <i class="fa fa-chevron-circle-down"></i></a>
+          </div>
         </div>
       </div>
     </section>
@@ -418,41 +454,41 @@
     <section id="talk-to-us">
       <div class="container">
         <div class="col-md-12">
-          <h2>Talk To Us</h2>
-          <p><em>Setting up a dealer package is easy!</em></p>
+          <h2>Contact Us</h2>
+          <h4>Get in touch to find out more or get your compliant Toyota package up and running!</h4>
           <p>Simply contact us online via the enquiry form below and one of our business managers will contact you shortly.</p>
           <div id="contact-form" class="panel panel-default col-md-8" data-uk-scrollspy="{cls:'uk-animation-slide-left'}">
             <div class="panel-body">
             <h3>Contact Form</h3>
-              <form class="form-horizontal" role="form">
+              <form class="form-horizontal" role="form" id="contact-form">
                 <div class="form-group">
-                  <label for="name" class="col-sm-3 control-label">Name</label>
+                  <label for="name" class="col-sm-3 control-label required">Name</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="name" placeholder="Your full name.">
+                    <input type="text" class="form-control" name="name" placeholder="Your full name."/>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="email" class="col-sm-3 control-label">Email</label>
+                  <label for="email" class="col-sm-3 control-label required">Email</label>
                   <div class="col-sm-9">
-                    <input type="email" class="form-control" id="email" placeholder="email@address.com">
+                    <input type="email" class="form-control" name="email" placeholder="email@address.com (or enter a phone number below).">
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="phone" class="col-sm-3 control-label">Phone</label>
+                  <label for="phone" class="col-sm-3 control-label required">Phone</label>
                   <div class="col-sm-9">
-                    <input type="phone" class="form-control" id="phone" placeholder="Landline or mobile.">
+                    <input type="phone" class="form-control" name="phone" placeholder="Landline or mobile (or enter an email above).">
                   </div>
                 </div>
                  <div class="form-group">
-                  <label for="dealership" class="col-sm-3 control-label">Dealership Name</label>
+                  <label for="dealership" class="col-sm-3 control-label required">Dealership Name</label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="dealership" placeholder="Dealership name.">
+                    <input type="text" class="form-control" name="dealership" placeholder="Dealership name."/>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="package" class="col-sm-3 control-label">Package</label>
                   <div class="col-sm-9">
-                    <select type="package" class="form-control" id="package">
+                    <select type="package" class="form-control" name="package">
                       <option value="" selected>Please Select ...</option>
                       <option value="PLUS">PLUS</option>
                       <option value="PRO">PRO</option>
@@ -462,8 +498,15 @@
                   </div>
                 </div>
                 <div class="form-group">
+                  <label for="package" class="col-sm-3 control-label">Comments</label>
+                  <div class="col-sm-9">
+                    <textarea id="comments" class="form-control" name="comments" placeholder="Comments ..."></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
                   <div class="col-sm-offset-3 col-sm-9">
-                    <button type="submit" class="btn btn-success">Send My Details!</button>
+                    <p>We’ll contact you within one business day!</p>
+                    <button type="submit" class="btn btn-lg btn-block btn-success">Send My Details!</button>
                   </div>
                 </div>
               </form>
@@ -512,8 +555,76 @@
     <script src="js/jquery.superscrollorama.js"></script>
     <!-- uikit js for animations -->
     <script src="js/uikit.min.js"></script>
+    <!-- bootstrap validator -->
+    <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
+
     <script type="text/JavaScript">
       jQuery(document).ready(function($){
+
+        // FORM VALIDATION
+        $('#contact-form').bootstrapValidator({
+            message: 'This field is required.',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+              name: {
+                message: 'Your name is required.',
+                validators: {
+                    notEmpty: {
+                        message: 'Your name is required.'
+                    }
+                }
+              },
+              dealership: {
+                message: 'Dealership name is required.',
+                validators: {
+                    notEmpty: {
+                        message: 'Dealership name is required.'
+                    }
+                }
+              },
+              email: {
+                validators: {
+                    emailAddress: {
+                        message: 'Must be a valid email address.'
+                    },
+                    notEmpty: {
+                        message: 'You must enter either an Email address or Phone number.'
+                    }
+                }
+              },
+              phone: {
+                validators: {
+                    integer: {
+                        message: 'Must be a valid phone number.'
+                    },
+                    notEmpty: {
+                        message: 'You must enter either an Email address or Phone number.'
+                    }
+                }
+              }
+
+            },
+            submitHandler: function(validator, form, submitButton) {
+              alert('javascript can be used to submit here.');
+            }
+        });
+        $('#contact-form input[name="email"]').change(function(){
+          if($(this).val != ''){
+            $('#contact-form').bootstrapValidator('enableFieldValidators', 'phone', false);
+          }
+        });
+        $('#contact-form input[name="phone"]').change(function(){
+          if($(this).val != ''){
+            $('#contact-form').bootstrapValidator('enableFieldValidators', 'email', false);
+          }
+        });
+        $('#contact-form label.required').each(function(){
+          $(this).append('<span class="required-tag">&#42;</span>')
+        });
 
         $('.plan').each(function(i){
           $(this).css('z-index', (100-i) );
@@ -559,6 +670,25 @@
         //controller.addTween('#contact-form', TweenMax.from( $('#contact-form'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,0);
         //controller.addTween('#contacts', TweenMax.from( $('#contacts'), .5, {css:{opacity: 0}}),0, -100);
         // smooth scroll for links that lead to other dom elements on the same page
+
+        $('#showServices').click(function(e){
+          e.preventDefault();
+          $(this).parents('.row').fadeOut(300, function(){
+            $('#serviceTiles').fadeIn(300);
+            $('html,body').animate({
+              scrollTop: ($('#serviceTiles').offset().top - 120)
+            }, 1000);
+          });
+          return false;
+        });
+        $('a.scroll-to').click(function(e){
+          e.preventDefault();
+          $('html,body').animate({
+              scrollTop: ($(''+$(this).attr('href')+'').offset().top - 60)
+            }, 1000);
+          return false;
+        });
+
         $(function() {
           $('a.onpage[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
