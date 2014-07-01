@@ -157,10 +157,28 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
   border-top: 0;
   background-color:#eaeaea;
 }
+.flat .plan li {
+	opacity: .5;
+}
+.flat .plan.active li, .flat .plan li.plan-name.active {
+	opacity: 1;
+}
+.flat .plan li.plan-name {
+	opacity: .5;
+}
+.flat .plan.options  li {
+	opacity:1;
+}
+.flat .plan li {
+	cursor:pointer;
+}
+.flat .plan li.plan-name.active {
+  background: #d11e24;
+}
 .flat .plan li.plan-name {
   padding: 15px;
   color: #fff;
-  background: #d11e24;
+  background: #aaa;
   border-top: 0;
 }
 .flat .col-md-3:first-child .plan li.plan-name {
@@ -191,14 +209,17 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 .flat .plan li img {
 	max-width: 100px;
 }
-.flat .plan li > strong {
+.flat .active li > strong {
+  color: #aaa;
+}
+.flat .plan.active li > strong {
   color: #ED1C24;
 }
 .flat .plan.featured li > strong {
   color: #ED1C24;
 }
 .flat .plan.options li > strong {
-	color:#686868;
+	color:#333;
 }
 .flat .plan li.plan-action {
 	border-bottom-left-radius: 6px;
@@ -213,7 +234,10 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
   background: #d11e24;
 }
 .flat .plan.options li.plan-name {
-  background: #aaa;
+  background: #686868;
+}
+#why-ds {
+	overflow:hidden;
 }
 #why-ds .container>h2 {
 	margin-bottom: -3em;
@@ -266,6 +290,7 @@ box-shadow: 0px 3px 3px rgba(0,0,0,.1);
 }
 #talk-to-us {
 	padding:5% 0;
+	overflow:hidden;
 }
 #talk-to-us h2 {
 	margin-top:0;

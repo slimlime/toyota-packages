@@ -167,8 +167,8 @@
       <h2>Exclusive Toyota Dealers Packages</h2>
         <div class="row flat">
             <div class="col-lg-3 col-md-3">
-                <ul class="plan plan1" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:0}">
-                    <li class="plan-name">
+                <ul class="plan active plan1" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:0}">
+                    <li class="plan-name active">
                         <h4>Plus Package</h4>
                         <small>Just the basics.</small>
                     </li>
@@ -208,6 +208,7 @@
                         <h4>Pro Package</h4>
                         <small>Personalised to your dealership.</small>
                     </li>
+                    
                     <li>
                       <img src="img/icon-personalisation.jpg" /><br/>
                       <strong>Personalisation</strong><br/>
@@ -488,7 +489,7 @@
                 <div class="form-group">
                   <label for="package" class="col-sm-3 control-label">Package</label>
                   <div class="col-sm-9">
-                    <select type="package" class="form-control" name="package">
+                    <select type="package" class="form-control" name="package" id="package">
                       <option value="" selected>Please Select ...</option>
                       <option value="PLUS">PLUS</option>
                       <option value="PRO">PRO</option>
@@ -669,8 +670,41 @@
         //controller.addTween('#example-pic', TweenMax.from( $('#example-pic'), 1, {css:{left:'1500px'}, ease:Quad.easeInOut}),0,-100);
         //controller.addTween('#contact-form', TweenMax.from( $('#contact-form'), 1, {css:{right:'1500px'}, ease:Quad.easeInOut}),0,0);
         //controller.addTween('#contacts', TweenMax.from( $('#contacts'), .5, {css:{opacity: 0}}),0, -100);
-        // smooth scroll for links that lead to other dom elements on the same page
 
+        // Package panel highlights
+        $('.plan li').click(function(){
+          $('.plan-name').removeClass('active');
+          $(this).parent().find('.plan-name').addClass('active');
+          $('#pricing').find('.plan').removeClass('active');
+          $('#pricing>.container>.row').find('div:lt('+($(this).parent('.plan').parent('div').index()+1)+')').find('.plan').addClass('active');
+          $(window).unbind('scroll', packageScrolling);
+        });
+
+        // Scrolling package panel highlights
+        var packageScrolling = function(){
+          if(window.pageYOffset < ($('.plan1').offset().top)-74) {
+            $('.plan-name').removeClass('active');
+            $('.plan1 .plan-name').addClass('active');
+            $('#pricing').find('.plan').removeClass('active');
+            $('.plan1').addClass('active');
+          }
+          if(window.pageYOffset > ($('.plan2').offset().top)-150) {
+            $('.plan-name').removeClass('active');
+            $('.plan2 .plan-name').addClass('active');
+            $('#pricing').find('.plan').removeClass('active');
+            $('.plan2, .plan1').addClass('active');
+          }
+          if(window.pageYOffset > ($('.plan3').offset().top)-75) {
+            $('.plan-name').removeClass('active');
+            $('.plan3 .plan-name').addClass('active');
+            $('#pricing').find('.plan').removeClass('active');
+            $('.plan3, .plan2, .plan1').addClass('active');
+          }
+        }
+
+        $(window).bind('scroll', packageScrolling);
+
+        // Toyota services show/hide
         $('#showServices').click(function(e){
           e.preventDefault();
           $(this).parents('.row').fadeOut(300, function(){
@@ -681,6 +715,8 @@
           });
           return false;
         });
+
+        // section smooth scroll buttons
         $('a.scroll-to').click(function(e){
           e.preventDefault();
           $('html,body').animate({
@@ -689,6 +725,7 @@
           return false;
         });
 
+        // smooth scroll for links that lead to other dom elements on the same page
         $(function() {
           $('a.onpage[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
