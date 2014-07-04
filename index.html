@@ -165,9 +165,11 @@
     <section id="pricing">
       <div class="container">
       <h2>Exclusive Toyota Dealers Packages</h2>
+      <p>Click on a package to see what’s included.</p>
         <div class="row flat">
             <div class="col-lg-3 col-md-3">
-                <ul class="plan active plan1" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:0}">
+              <!--  data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:0}" -->
+                <ul class="plan active plan1">
                     <li class="plan-name active">
                         <h4>Plus Package</h4>
                         <small>Just the basics.</small>
@@ -193,17 +195,20 @@
                       <img src="img/icon-field-support.jpg" /><br/>
                         <strong>Tier 2 Field Support</strong> <br/>Dedicated BM’s by State.
                     </li>
-                    <li class="plan-price">
-                      <strong>$300</strong> / month
-                    </li>
-                    <li class="plan-action">
-                        <a href="#talk-to-us" class="btn btn-success package-cta onpage" data-package="PLUS">Select This Package</a>
-                    </li>
+                    <div class="plan-cta">
+                      <li class="plan-price">
+                        <strong>$300</strong> / month
+                      </li>
+                      <li class="plan-action">
+                          <a href="#talk-to-us" class="btn btn-success package-cta onpage" data-package="PLUS">Select This Package</a>
+                      </li>
+                    </div>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-md-3">
-                <ul class="plan plan2" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:500}">
+              <!--  data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:500}" -->
+                <ul class="plan plan2">
                     <li class="plan-name">
                         <h4>Pro Package</h4>
                         <small>Personalised to your dealership.</small>
@@ -230,18 +235,21 @@
                         <img src="img/icon-moviestars.jpg" /><br/>
                         <strong>Movie Stars</strong> <br/>HTML 5 Video Clips
                     </li>
-                    <li class="plan-price">
-                      <strong>Inc. Plus Package.<br/></strong>
-                      <strong>$600</strong> / month
-                    </li>
-                    <li class="plan-action">
-                        <a href="#talk-to-us" class="btn btn-success package-cta onpage" data-package="PRO">Select This Package</a>
-                    </li>
+                    <div class="plan-cta">
+                      <li class="plan-price">
+                        <strong>Inc. Plus Package.<br/></strong>
+                        <strong>$600</strong> / month
+                      </li>
+                      <li class="plan-action">
+                          <a href="#talk-to-us" class="btn btn-success package-cta onpage" data-package="PRO">Select This Package</a>
+                      </li>
+                    </div>
                 </ul>
          </div>
 
          <div class="col-lg-3 col-md-3">
-            <ul class="plan plan3" data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:1000}">
+          <!--  data-uk-scrollspy="{cls:'uk-animation-slide-left', delay:1000}" -->
+            <ul class="plan plan3">
                 <li class="plan-name">
                     <h4>ELITE Package</h4>
                     <small>The complete package.</small>
@@ -268,18 +276,21 @@
                     <img src="img/icon-social.jpg" /><br/>
                     <strong>Social Media</strong> <br/>Support &amp; Advice
                 </li>
-                <li class="plan-price">
-                  <strong>Inc. Plus &amp; Pro Packages.<br/></strong>
-                  <strong>$1300</strong> / month
-                </li>
-                <li class="plan-action">
-                    <a href="#talk-to-us" class="btn btn-success package-cta onpage" data-package="ELITE">Select This Package</a>
-                </li>
+                <div class="plan-cta">
+                  <li class="plan-price">
+                    <strong>Inc. Plus &amp; Pro Packages.<br/></strong>
+                    <strong>$1300</strong> / month
+                  </li>
+                  <li class="plan-action">
+                      <a href="#talk-to-us" class="btn btn-success package-cta onpage" data-package="ELITE">Select This Package</a>
+                  </li>
+                </div>
             </ul>
      </div>
 
      <div class="col-lg-3 col-md-3">
-        <ul class="plan plan4 options" data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:1500}">
+      <!-- data-uk-scrollspy="{cls:'uk-animation-slide-right', delay:1500}" -->
+        <ul class="plan plan4 options">
             <li class="plan-name">
                 <h4>OPTIONS</h4>
                 <small>Available for all Packages.</small>
@@ -672,15 +683,25 @@
         //controller.addTween('#contacts', TweenMax.from( $('#contacts'), .5, {css:{opacity: 0}}),0, -100);
 
         // Package panel highlights
-        $('.plan li').click(function(){
-          $('.plan-name').removeClass('active');
-          $(this).parent().find('.plan-name').addClass('active');
-          $('#pricing').find('.plan').removeClass('active');
-          $('#pricing>.container>.row').find('div:lt('+($(this).parent('.plan').parent('div').index()+1)+')').find('.plan').addClass('active');
-          $(window).unbind('scroll', packageScrolling);
-        });
+        var clickPackageFunctions = function(){
+          $('.plan li').click(function(){
+              $('.plan-name').removeClass('active');
+              $(this).parent().find('.plan-name').addClass('active');
+              if ($(this).parent('.plan').find('.plan-cta').is(':visible')){
+                //do nothing
+              } else {
+                $('#pricing').find('.plan-cta').slideUp(300);
+                $(this).parent().find('.plan-cta').slideDown(300);
+              }
+              $('#pricing').find('.plan').removeClass('active');
+              $('#pricing>.container>.row').children('div:lt('+($(this).parent('.plan').parent('div').index()+1)+')').find('.plan').addClass('active');
+              $(window).unbind('scroll', packageScrolling);
+          });
+        }
+        
 
         // Scrolling package panel highlights
+        /*
         var packageScrolling = function(){
           if(window.pageYOffset < ($('.plan1').offset().top)-74) {
             $('.plan-name').removeClass('active');
@@ -700,9 +721,54 @@
             $('#pricing').find('.plan').removeClass('active');
             $('.plan3, .plan2, .plan1').addClass('active');
           }
+        }*/
+
+        // Scrolling package panel animation
+        var packageScrolling = function(){
+          if(window.pageYOffset > ($('.plan1').offset().top)-160) {
+            setTimeout(function(){
+              $('.plan-name').removeClass('active');
+              $('.plan1 .plan-name').addClass('active');
+              $('.plan1').find('.plan-cta').slideDown(300);
+              $('#pricing').find('.plan').removeClass('active');
+              $('.plan1').addClass('active');
+            }, 100);
+            setTimeout(function(){
+              $('.plan-name').removeClass('active');
+              $('.plan2 .plan-name').addClass('active');
+              $('.plan1').find('.plan-cta').slideUp(300);
+              $('.plan2').find('.plan-cta').slideDown(300);
+              $('#pricing').find('.plan').removeClass('active');
+              $('.plan2, .plan1').addClass('active');
+            }, 1500);
+            setTimeout(function(){
+              $('.plan-name').removeClass('active');
+              $('.plan3 .plan-name').addClass('active');
+              $('.plan2').find('.plan-cta').slideUp(300);
+              $('.plan3').find('.plan-cta').slideDown(300);
+              $('#pricing').find('.plan').removeClass('active');
+              $('.plan3, .plan2, .plan1').addClass('active');
+            }, 3000);
+            $(window).unbind('scroll', packageScrolling);
+          }
+        }
+        console.log($(window).innerWidth());
+        if ($(window).innerWidth() > 767 ) {
+          $(window).bind('scroll', packageScrolling);
+          clickPackageFunctions();
+        } else {
+          $('.plan, .plan-name').addClass('active');
         }
 
-        $(window).bind('scroll', packageScrolling);
+        // Apply js max height to packages (there is a css fallback)
+        var maxHeight = -1;
+        $('.plan').each(function() {
+            if ($(this).height() > maxHeight)
+                maxHeight = $(this).height();
+        });
+        $('.plan').each(function() {
+            $(this).css('min-height', maxHeight+'px');
+        });
 
         // Toyota services show/hide
         $('#showServices').click(function(e){
@@ -710,7 +776,7 @@
           $(this).parents('.row').fadeOut(300, function(){
             $('#serviceTiles').fadeIn(300);
             $('html,body').animate({
-              scrollTop: ($('#serviceTiles').offset().top - 120)
+              scrollTop: ($('#serviceTiles').offset().top - 50)
             }, 1000);
           });
           return false;
