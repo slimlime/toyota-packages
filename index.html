@@ -725,7 +725,7 @@
 
         // Scrolling package panel animation
         var packageScrolling = function(){
-          if(window.pageYOffset > ($('.plan1').offset().top)-160) {
+          if(window.pageYOffset > ($('.plan1').offset().top)-200) {
             setTimeout(function(){
               $('.plan-name').removeClass('active');
               $('.plan1 .plan-name').addClass('active');
@@ -752,7 +752,7 @@
             $(window).unbind('scroll', packageScrolling);
           }
         }
-        console.log($(window).innerWidth());
+
         if ($(window).innerWidth() > 767 ) {
           $(window).bind('scroll', packageScrolling);
           clickPackageFunctions();
